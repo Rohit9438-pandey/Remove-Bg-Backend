@@ -7,7 +7,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 COPY --from=build /app/target/removebg-0.0.1-SNAPSHOT.jar removebg.jar
 EXPOSE 8080
 ENTRYPOINT [ "java" , "-jar" , "removebg.jar" ]
