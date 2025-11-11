@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@CrossOrigin(origins = "https://gregarious-dasik-ddaeb8.netlify.app/")
+@CrossOrigin(origins = "https://gregarious-dasik-ddaeb8.netlify.app")
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor

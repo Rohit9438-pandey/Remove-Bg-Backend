@@ -48,10 +48,10 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of(
                 "http://localhost:5173" ,
-                "https://gregarious-dasik-ddaeb8.netlify.app/"
+                "https://gregarious-dasik-ddaeb8.netlify.app"
         ));
         config.setAllowedMethods(List.of("GET" , "POST" , "PUT" , "DELETE" , "PATCH" , "OPTIONS"));
-        config.setAllowedHeaders(List.of("Authorization" , "Content-Type"));
+        config.addAllowedHeader("*");
         config.setAllowCredentials(true);
 
 
